@@ -1,0 +1,74 @@
+.gerente-container {
+  display: flex;
+  background-color: #f0f0f0;
+  padding: 20px;
+  height: 100vh;
+}
+
+/* Style for the company logo */
+.small-logo {
+  width: 100px;
+  height: auto;
+}
+
+/* Style for the left section */
+.left-section {
+  flex: 1;
+  padding-right: 20px;
+  /* Adjust vertical position */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align to the left */
+  margin-bottom: 40px; /* Add spacing below */
+}
+
+/* Style for the individual performance table */
+.individual-performance {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px; /* Added spacing between tables */
+}
+
+.individual-performance th,
+.individual-performance td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 2px solid #ddd;
+}
+
+/* Style for the right section */
+.right-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* Adjust spacing above the file upload section */
+  padding-bottom: 10px; /* Add some padding at the bottom */
+}
+
+/* Style for percentage bars */
+.percentage-bar {
+  width: 100px;
+  height: 20px;
+  background-color: #ddd;
+  position: relative;
+}
+
+.percentage-bar .fill {
+  height: 100%;
+  background-color: #0074d9;
+}
+
+/* Style for file upload buttons */
+.file-upload-section button {
+  background-color: #0074d9;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.file-upload-section {
+  margin-top: auto; /* Move file upload section to the bottom */
+}
