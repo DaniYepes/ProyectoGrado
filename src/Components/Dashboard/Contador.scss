@@ -1,52 +1,82 @@
 .gerente-container {
-  display: flex;
-  background-color: #f0f0f0;
-  padding: 20px;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  background-color: #ffffff;
   height: 100vh;
 }
 
-/* Style for the company logo */
-.small-logo {
-  width: 100px;
+.header {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  justify-content: space-between;
+  background-color: #a29bce; /* Purple background for header */
+  color: #000; /* Black text color */
+}
+
+.logout-button {
+  background-color: #ff4d4d; /* Red color for logout button */
+  color: #fff; /* White text color */
+  border: none;
+  padding: 10px 15px; /* Adjust padding as needed */
+  border-radius: 5px; /* Rounded corners for buttons */
+  cursor: pointer;
+  font-size: 16px; /* Adjust font size as needed */
+}
+
+.logout-button:hover {
+  background-color: #d9534f; /* Darker red on hover */
+}
+
+.company-image {
+  width: 80px;
   height: auto;
 }
 
-/* Style for the left section */
-.left-section {
-  flex: 1;
-  padding-right: 20px;
-  /* Adjust vertical position */
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start; /* Align to the left */
-  margin-bottom: 40px; /* Add spacing below */
+.header-title {
+  display: flex; /* Use flexbox for header title */
+  align-items: center; /* Align items vertically */
+  flex-grow: 1; /* Allow title to grow and fill available space */
 }
 
-/* Style for the individual performance table */
-.individual-performance {
+h2 {
+  margin: 0;
+  font-size: 1.2em;
+  margin-left: 20px; /* Add spacing between image and title */
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  padding: 20px;
+  gap: 20px;
+}
+
+.left-section,
+.right-section {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+}
+
+.individual-performance,
+.percentage-table {
   width: 100%;
   border-collapse: collapse;
-  margin-bottom: 20px; /* Added spacing between tables */
+  margin-bottom: 20px;
 }
 
 .individual-performance th,
-.individual-performance td {
+.individual-performance td,
+.percentage-table th,
+.percentage-table td {
   padding: 10px;
   text-align: left;
   border-bottom: 2px solid #ddd;
 }
 
-/* Style for the right section */
-.right-section {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  /* Adjust spacing above the file upload section */
-  padding-bottom: 10px; /* Add some padding at the bottom */
-}
-
-/* Style for percentage bars */
 .percentage-bar {
   width: 100px;
   height: 20px;
@@ -59,16 +89,98 @@
   background-color: #0074d9;
 }
 
-/* Style for file upload buttons */
-.file-upload-section button {
-  background-color: #0074d9;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
-  margin-right: 10px;
+.file-upload-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  background-color: #f8f8f8; /* Light gray background */
+  margin-top: 20px; /* Add spacing above section */
 }
 
-.file-upload-section {
-  margin-top: auto; /* Move file upload section to the bottom */
+.file-upload-section h2 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
 }
+
+.upload-image {
+  width: 70px; /* Adjust image width as needed */
+  height: 70px; /* Adjust image height as needed */
+  margin-right: 10px; /* Add spacing between image and buttons */
+  margin-bottom: 30px;
+}
+
+.file-upload-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.file-upload-buttons button {
+  background-color: #a29bce; /* Purple color for buttons */
+  color: #fff; /* White text color */
+  border: none;
+  padding: 5px 15px; /* Adjust padding as needed */
+  border-radius: 5px; /* Rounded corners for buttons */
+  cursor: pointer;
+  font-size: 16px; /* Adjust font size as needed */
+  margin: 0 5px; /* Add spacing between buttons */
+}
+
+.calendar-section {
+  margin-top: 5px; /* Add spacing above calendar */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f8f8f8; /* Light gray background for calendar */
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.small-calendar {
+  width: 300px;
+  height: auto;
+  border: none; /* Remove default calendar border */
+  border-radius: 5px; /* Add rounded corners to calendar */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.small-calendar .react-calendar__navigation {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.small-calendar .react-calendar__navigation button {
+  background-color: #fff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 14px;
+  color: #333;
+}
+
+.small-calendar .react-calendar__month-view__month {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.small-calendar .react-calendar__month-view__weekday {
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  color: #666;
+}
+
+.small-calendar .react-calendar__month-view__day {
+  text-align: center;
+  font-size: 14px;
+  padding: 5px;
+  cursor: pointer;
+}
+
