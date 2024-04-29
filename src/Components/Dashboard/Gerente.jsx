@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import imagen from "../../LoginAssets/ImagenMAG.jpg";
-import upload from "../../LoginAssets/Upload.png";
+import informe from "../../LoginAssets/Informe.png";
 import Calendar from "react-calendar";
 import "./Gerente.scss";
 
@@ -21,25 +21,71 @@ const Gerente = () => {
       <main className="main">
         <section className="left-section">
           <h2>Porcentaje de cumplimiento individual</h2>
-          <table className="individual-performance">
-            <thead>
-              <tr>
-                <th>Cumplió</th>
-                <th>Contador asignado</th>
-                <th>Compañías</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>
-                  <input type="checkbox" />
-                </td>
-                <td>Pepito Perez</td>
-                <td>Compañía A</td>
-              </tr>
-              {/* Add more rows */}
-            </tbody>
-          </table>
+          <div className="individual-percentage-section">
+            <div
+              className="fixed-headers"
+              style={{ position: "sticky", top: 0 }}
+            >
+              <table className="individual-performance">
+                <thead>
+                  <tr>
+                    <th>Cumplió</th>
+                    <th>Coordinador asignado</th>
+                    <th>Contador asignado</th>
+                    <th>Compañías</th>
+                  </tr>
+                </thead>
+              </table>
+            </div>
+            <div className="scrollable-table">
+              <table className="individual-performance">
+                <tbody>
+                  <tr>
+                    <td>
+                      <input type="checkbox" />
+                    </td>
+                    <td>Pepito Perez</td>
+                    <td>Pepito Perez</td>
+                    <td>Compañía A</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input type="checkbox" />
+                    </td>
+                    <td>Pepito Perez</td>
+                    <td>Pepito Perez</td>
+                    <td>Compañía B</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input type="checkbox" />
+                    </td>
+                    <td>Pepito Perez</td>
+                    <td>Pepito Perez</td>
+                    <td>Compañía C</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input type="checkbox" />
+                    </td>
+                    <td>Pepito Perez</td>
+                    <td>Pepito Perez</td>
+                    <td>Compañía D</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input type="checkbox" />
+                    </td>
+                    <td>Pepito Perez</td>
+                    <td>Pepito Perez</td>
+                    <td>Compañía E</td>
+                  </tr>
+                  {/* Add more rows */}
+                </tbody>
+              </table>
+            </div>
+          </div>
+
           <h2>Porcentaje de cumplimiento</h2>
           <div className="percentage-section">
             <table className="percentage-table">
@@ -73,16 +119,15 @@ const Gerente = () => {
             />
           </div>
           <div className="file-upload-section">
-            <h2>Carga de archivos para aprobación</h2>
+            <h2>Descargar Informe KPI's</h2>
             <div className="upload-image">
               <button>
-                <img src={upload} alt="Upload Logo" className="small-logo" />
+                <img src={informe} alt="Upload Logo" className="small-logo" />
               </button>
             </div>
             <div className="file-upload-buttons">
-              <button>Cargar Archivos</button>
-              <button>Enviar</button>
-              <button>Descargar Base</button>
+              <button>Descargar archivos aprobación</button>
+              <button>Enviar aprobación</button>
             </div>
           </div>
         </section>

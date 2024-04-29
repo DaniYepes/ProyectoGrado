@@ -14,20 +14,6 @@
   color: #000; /* Black text color */
 }
 
-.logout-button {
-  background-color: #ff4d4d; /* Red color for logout button */
-  color: #fff; /* White text color */
-  border: none;
-  padding: 10px 15px; /* Adjust padding as needed */
-  border-radius: 5px; /* Rounded corners for buttons */
-  cursor: pointer;
-  font-size: 16px; /* Adjust font size as needed */
-}
-
-.logout-button:hover {
-  background-color: #d9534f; /* Darker red on hover */
-}
-
 .company-image {
   width: 80px;
   height: auto;
@@ -61,11 +47,16 @@ h2 {
   border-radius: 10px;
 }
 
+.individual-percentage-section {
+  max-height: 200px; /* Establece la altura máxima para la tabla */
+  overflow-y: auto; /* Habilita la barra de desplazamiento vertical */
+}
+
 .individual-performance,
 .percentage-table {
   width: 100%;
   border-collapse: collapse;
-  margin-bottom: 20px;
+  margin-bottom: 0px;
 }
 
 .individual-performance th,
@@ -73,8 +64,8 @@ h2 {
 .percentage-table th,
 .percentage-table td {
   padding: 10px;
-  text-align: left;
-  border-bottom: 2px solid #ddd;
+  text-align: center;
+  border-bottom: 2px solid #dddddd;
 }
 
 .percentage-bar {
@@ -87,6 +78,13 @@ h2 {
 .percentage-bar .fill {
   height: 100%;
   background-color: #0074d9;
+}
+
+.fixed-headers {
+  width: calc(87% + 17px); /* Adjust the width for the table */
+  background-color: #fff; /* Add a white background color */
+  position: sticky;
+  top: 0;
 }
 
 .file-upload-section {

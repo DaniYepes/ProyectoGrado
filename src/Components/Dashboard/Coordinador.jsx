@@ -21,25 +21,65 @@ const Gerente = () => {
       <main className="main">
         <section className="left-section">
           <h2>Porcentaje de cumplimiento individual</h2>
-          <table className="individual-performance">
-            <thead>
-              <tr>
-                <th>Cumplió</th>
-                <th>Contador asignado</th>
-                <th>Compañías</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>
-                  <input type="checkbox" />
-                </td>
-                <td>Pepito Perez</td>
-                <td>Compañía A</td>
-              </tr>
-              {/* Add more rows */}
-            </tbody>
-          </table>
+          <div className="individual-percentage-section">
+            <div
+              className="fixed-headers"
+              style={{ position: "sticky", top: 0 }}
+            >
+              <table className="individual-performance">
+                <thead>
+                  <tr>
+                    <th>Cumplió</th>
+                    <th>Contador asignado</th>
+                    <th>Compañías</th>
+                  </tr>
+                </thead>
+              </table>
+            </div>
+            <div className="scrollable-table">
+              <table className="individual-performance">
+                <tbody>
+                  <tr>
+                    <td>
+                      <input type="checkbox" />
+                    </td>
+                    <td>Pepito Perez</td>
+                    <td>Compañía A</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input type="checkbox" />
+                    </td>
+                    <td>Pepito Perez</td>
+                    <td>Compañía B</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input type="checkbox" />
+                    </td>
+                    <td>Pepito Perez</td>
+                    <td>Compañía C</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input type="checkbox" />
+                    </td>
+                    <td>Pepito Perez</td>
+                    <td>Compañía D</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input type="checkbox" />
+                    </td>
+                    <td>Pepito Perez</td>
+                    <td>Compañía E</td>
+                  </tr>
+                  {/* Add more rows */}
+                </tbody>
+              </table>
+            </div>
+          </div>
+
           <h2>Porcentaje de cumplimiento</h2>
           <div className="percentage-section">
             <table className="percentage-table">
@@ -82,7 +122,7 @@ const Gerente = () => {
             <div className="file-upload-buttons">
               <button>Cargar Archivos</button>
               <button>Enviar</button>
-              <button>Descargar Base</button>
+              <button>Descargar archivos aprobación</button>
             </div>
           </div>
         </section>
